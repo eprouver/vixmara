@@ -1,5 +1,23 @@
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
+@font-face {
+  font-family: 'Md_Gothic11';
+  src: url('../fonts/Md_Gothic11.eot');
+  src: url('../fonts/Md_Gothic11.woff2') format('woff2'),
+       url('../fonts/Md_Gothic11.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MediaGothic';
+  src: url('../fonts/MediaGothic.woff') format('woff'),
+       url('../fonts/MediaGothic.ttf') format('truetype'),
+       url('../fonts/MediaGothic.svg#MediaGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -114,7 +132,7 @@ textarea {
 }
 
 .logo {
-    font-family: 'Lato', Arial, sans-serif;
+    font-family: 'Md_Gothic11', 'MediaGothic', Arial, sans-serif;
     font-size: 10vmin;
     position: relative;
     color: white;
@@ -352,7 +370,7 @@ button.show-info {
 }
 
 .img-viewer {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     background-position: center center;
     background-size: cover;
@@ -406,4 +424,12 @@ button.show-info {
     #info-text{
       position: relative;
     }
+    .img-viewer{
+      width: 80vw;
+    }
+}
+
+a{
+  color: white;
+  font-size: 1.1em;
 }
