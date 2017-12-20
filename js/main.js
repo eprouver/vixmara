@@ -1,5 +1,6 @@
 function showAbout() {
-    $('#front-loader').addClass('loaded')
+    $('#front-loader').addClass('loaded');
+    var auto = true;
 
     setTimeout(function() {
         $("#slider-page").show();
@@ -18,7 +19,19 @@ function showAbout() {
             onChange: () => {},
         });
 
-        $('.next').on('click', () => mySiema.next());
+        $('.next').on('click', () => {
+          mySiema.next();
+          auto = false;
+        });
+
+        setTimeout(function autoNext(){    
+          if(auto){
+            mySiema.next();
+            setTimeout(() => {
+              autoNext();
+            }, 6000);
+          }
+        }, 6000)
     }, 2200)
 
 
